@@ -1,0 +1,117 @@
+/* ===== Polimento do painel lateral Radio Garden ===== */
+.panel-section-title {
+	font-weight: 700;
+	font-size: 1.08em;
+	margin-bottom: 8px;
+	color: var(--accent);
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.accent { color: var(--accent); }
+.radio-section { margin-bottom: 18px; }
+.radio-list, .popular-list, .nearby-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.radio-item, .popular-radio, .nearby-city {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 6px 0;
+	border-radius: 6px;
+	transition: background 0.15s;
+}
+.radio-item:hover, .popular-radio:hover, .nearby-city:hover {
+	background: rgba(191,44,56,0.08);
+}
+.radio-title, .city-title {
+	font-weight: 600;
+	font-size: 1em;
+}
+.btn-accent, .btn-xs.btn-accent {
+	background: var(--accent);
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.1em;
+	transition: background 0.18s;
+}
+.btn-accent:hover, .btn-xs.btn-accent:hover {
+	background: #a51f2b;
+}
+.btn-xs.btn-accent {
+	width: 26px;
+	height: 26px;
+	font-size: 0.95em;
+}
+.panel-card:last-child { border-bottom: none; margin-bottom: 0; }
+.muted { color: var(--muted); }
+.panel-card { background: transparent; border-bottom: 1px solid rgba(255,255,255,0.04); padding-bottom: 12px; margin-bottom: 12px; }
+.panel-card .fa { opacity: 0.8; }
+.panel-card ul { margin: 0; padding: 0; }
+@media (max-width: 700px) {
+	#side-panel { width: 98vw !important; left: 1vw; right: 1vw; top: 60px; padding: 8px; }
+	.panel-section-title { font-size: 1em; }
+	.radio-title, .city-title { font-size: 0.98em; }
+}
+:root{
+	--bg: #0D0D0D;
+	--panel: #141414;
+	--muted: #bdbdbd;
+	--accent: #BF2C38;
+}
+body { background: var(--bg); color: #fff; }
+.main-header.navbar { background: #0b0b0b; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.main-sidebar { background:#070707; }
+.brand-link { background: var(--accent)!important; color:#fff!important; }
+
+/* Layout: map full height */
+.content-wrapper { background: transparent; padding: 0; }
+#map { height: calc(100vh - 56px - 84px); /* minus navbar and footer player heights */ width:100%; }
+/* Side panel */
+#side-panel {
+	position: absolute;
+	right: 24px;
+	top: 80px;
+	width: 420px;
+	max-height: calc(100vh - 160px);
+	background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+	border-radius: 12px;
+	border: 1px solid rgba(255,255,255,0.04);
+	padding: 16px;
+	overflow-y: auto;
+	box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+	z-index: 1200;
+}
+/* Small screens */
+@media (max-width: 1100px){
+	#side-panel { width: 320px; right: 12px; top: 70px; max-height: calc(100vh - 140px); }
+}
+
+/* Cards inside side panel */
+.panel-card { background: transparent; border-bottom: 1px solid rgba(255,255,255,0.04); padding-bottom: 12px; margin-bottom: 12px; }
+.muted { color: var(--muted); }
+
+/* country highlight style */
+.country-style { color: #666; }
+.country-hover { color: var(--accent); }
+
+/* audio controls styling */
+audio { width: 100%; margin-top: 8px; background: transparent; outline:none; }
+
+/* search */
+#country-search { width: 100%; margin-bottom: 12px; }
+
+/* footer player placeholder to match home */
+.player-footer { position: fixed; right: 0; left: 0; bottom: 0; height: 84px; background: rgba(8,8,8,0.95); border-top: 1px solid rgba(255,255,255,0.04); display:flex; align-items:center; padding: 10px 20px; z-index: 1050; }
+
+/* small helpers */
+.small-muted { font-size: 13px; color:var(--muted); }
+.clickable { cursor: pointer; }

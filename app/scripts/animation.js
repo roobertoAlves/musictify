@@ -1,0 +1,1 @@
+// Copie o conteúdo do animation.js original aqui.

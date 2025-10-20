@@ -1,0 +1,1 @@
+// Copie o conteúdo do player.js original aqui.

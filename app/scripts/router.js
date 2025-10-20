@@ -1,0 +1,1 @@
+// Copie o conteúdo do router.js original aqui.
